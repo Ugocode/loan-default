@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head><h1>Result</h1>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+   <body>
+      <div class="container">
+        {% if prediction == 0 %}
+            <h2 style="color: red;">Prediction: We are Sorry no Loan for you</h2>
+        {% elif prediction == 1 %}
+            <h2 style="color: green">Prediction: Congratulations! You are Approved for the Loan</h2>
+        {% endif %}
+        </div>
+   </body>
+</html>
